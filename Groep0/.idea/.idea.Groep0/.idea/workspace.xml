@@ -31,6 +31,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/Unity/RocketAssignment/Assets/Scripts/Health.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Inventory/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Unity/RocketAssignment/Assets/Scripts/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Unity/RocketAssignment/Assets/Scripts/Damage.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -40,9 +41,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/InventoryHud.cs" />
       <option value="$PROJECT_DIR$/Assets/Inventory/InventoryItemBase.cs" />
-      <option value="$PROJECT_DIR$/Assets/Inventory/InventoryItem.cs" />
-      <option value="$PROJECT_DIR$/Assets/SpelerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Inventory/InventoryHud.cs" />
+      <option value="$PROJECT_DIR$/Assets/Inventory/Inventory.cs" />
+      <option value="$PROJECT_DIR$/Assets/SpelerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Inventory/InventoryItem.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1ttLPtCoEATWY3xkek5yanEBiuS" />
@@ -86,7 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1623583425948</updated>
-      <workItem from="1623583439083" duration="6725000" />
+      <workItem from="1623583439083" duration="8607000" />
     </task>
     <servers />
   </component>

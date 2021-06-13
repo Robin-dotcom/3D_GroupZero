@@ -1,9 +1,16 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryItem : MonoBehaviour
 {
+    public RawImage inventoryImage;
+    
     public string DisplayName;
+
+    public void PickupItem()
+    {
+        inventoryImage.color = Color.white;
+        this.transform.parent.gameObject.SetActive(false);
+    }
 }

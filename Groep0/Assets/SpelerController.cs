@@ -15,14 +15,12 @@ public class SpelerController : MonoBehaviour
 
     public InventoryItem nearbyItem;
 
-    public InventoryItem[] inventory;
+    public Inventory inventory;
     
     // Start is called before the first frame update
     void Start()
     {
         this.rb = GetComponent<Rigidbody>();
-
-        inventoryHud = GameObject.Find("InventoryCanvas").GetComponent<InventoryHud>();
     }
 
     private void Update()
@@ -30,9 +28,10 @@ public class SpelerController : MonoBehaviour
         if (nearbyItem != null && Input.GetKeyDown(KeyCode.F))
         {
             Debug.Log("Picking up " + nearbyItem.DisplayName);
-            this.inventory.Append(nearbyItem);
+
+            inventory.AddItem(nearbyItem);
             
-            
+            nearbyItem.PickupItem();
         }
     }
 
@@ -95,8 +94,16 @@ public class SpelerController : MonoBehaviour
 
     public void OnTriggerExit(Collider other)
     {
-        inventoryHud.ClosePickupMessage();
 
-        nearbyItem = null;
+        InventoryItem item = other.GetComponent<InventoryItem>();
+        
+        if (item != null)
+        {
+            nearbyItem = null;
+
+            Debug.Log("Leaving " + item.DisplayName);
+            
+            inventoryHud.ClosePickupMessage();
+        }
     }
 }
