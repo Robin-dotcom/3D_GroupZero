@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour
     // variables
     public SpelerController speler;
     float cl = 85f;
-    float sens = 200f;
+    float sens = 400f;
     float rotatieV, rotatieH;
 
     private void Start()

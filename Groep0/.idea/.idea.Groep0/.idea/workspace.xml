@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9174710e-a89f-4bda-8166-c9123756ec1c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Inventory/InventoryHud.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Inventory/InventoryHud.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Groep0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Groep0/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Terrein.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Terrein.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpelerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpelerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +26,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/InventoryHud.cs" />
       <option value="$PROJECT_DIR$/Assets/Inventory/InventoryItemBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Inventory/Inventory.cs" />
-      <option value="$PROJECT_DIR$/Assets/Inventory/InventoryItem.cs" />
       <option value="$PROJECT_DIR$/Assets/Inventory/InventoryHud.cs" />
       <option value="$PROJECT_DIR$/Assets/SpelerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Inventory/InventoryItem.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1ttLPtCoEATWY3xkek5yanEBiuS" />
@@ -74,7 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1623583425948</updated>
       <workItem from="1623583439083" duration="9828000" />
-      <workItem from="1623610469426" duration="310000" />
+      <workItem from="1623610469426" duration="1445000" />
     </task>
     <servers />
   </component>
