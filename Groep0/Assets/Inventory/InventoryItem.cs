@@ -11,6 +11,6 @@ public class InventoryItem : MonoBehaviour
     public void PickupItem()
     {
         inventoryImage.color = Color.white;
-        this.transform.parent.gameObject.SetActive(false);
+        this.transform.gameObject.SetActive(false);
     }
 }

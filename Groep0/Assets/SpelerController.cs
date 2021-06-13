@@ -84,13 +84,14 @@ public class SpelerController : MonoBehaviour
     {
         InventoryItem item = other.GetComponent<InventoryItem>();
         Debug.Log("Encountered something...");
+        
         if (item != null)
         {
             nearbyItem = item;
 
             Debug.Log("Encountered " + item.DisplayName);
             
-            inventoryHud.OpenPickupMessage("Press 'f' to pick up object.");
+            inventoryHud.OpenPickupMessage($"Press 'f' to pick up {item.DisplayName}.");
         }
     }
 
