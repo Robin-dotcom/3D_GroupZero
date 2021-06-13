@@ -4,36 +4,30 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public SpelerController player;
-    private float sens = 200f;
-    private float clamp = 85f;
-
-    private float verticalRotation;
-    private float horizontalRotation;
+    // variables
+    public SpelerController speler;
+    float cl = 85f;
+    float sens = 200f;
+    float rotatieV, rotatieH;
 
     private void Start()
     {
-        this.verticalRotation = this.transform.localEulerAngles.x;
-        this.horizontalRotation = this.transform.eulerAngles.y;
+        this.rotatieV = this.transform.localEulerAngles.x;
+        this.rotatieH = this.transform.eulerAngles.y;
     }
 
     private void Update()
     {
-        Look();
-        Debug.DrawRay(this.transform.position, this.transform.forward * 2, Color.red);
-    }
+        float MVertical = -Input.GetAxis("Mouse Y");
+        float MHorizontal = Input.GetAxis("Mouse X");
 
-    private void Look()
-    {
-        float mouseVertical = -Input.GetAxis("Mouse Y");
-        float mouseHorizontal = Input.GetAxis("Mouse X");
+        this.rotatieV += MVertical * this.sens * Time.deltaTime;
+        this.rotatieH += MHorizontal * this.sens * Time.deltaTime;
 
-        this.verticalRotation += mouseVertical * this.sens * Time.deltaTime;
-        this.horizontalRotation += mouseHorizontal * this.sens * Time.deltaTime;
+        this.rotatieV = Mathf.Clamp(this.rotatieV, -this.cl, this.cl);
 
-        this.verticalRotation = Mathf.Clamp(this.verticalRotation, -this.clamp, this.clamp);
-
-        this.transform.localRotation = Quaternion.Euler(this.verticalRotation, 0f, 0f);
-        this.player.transform.rotation = Quaternion.Euler(0f, this.horizontalRotation, 0f);
+        this.transform.localRotation = Quaternion.Euler(this.rotatieV, 0f, 0f);
+        this.speler.transform.rotation = Quaternion.Euler(0f, this.rotatieH, 0f);
+        Debug.DrawRay(this.transform.position, this.transform.forward * 2, Color.white);
     }
 }
