@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SpelerController : MonoBehaviour
@@ -8,11 +10,30 @@ public class SpelerController : MonoBehaviour
     private Rigidbody rb;
     public LayerMask layerMask;
     public bool ground;
+
+    public InventoryHud inventoryHud;
+
+    public InventoryItem nearbyItem;
+
+    public InventoryItem[] inventory;
+    
     // Start is called before the first frame update
     void Start()
     {
         this.rb = GetComponent<Rigidbody>();
 
+        inventoryHud = GameObject.Find("InventoryCanvas").GetComponent<InventoryHud>();
+    }
+
+    private void Update()
+    {
+        if (nearbyItem != null && Input.GetKeyDown(KeyCode.F))
+        {
+            Debug.Log("Picking up " + nearbyItem.DisplayName);
+            this.inventory.Append(nearbyItem);
+            
+            
+        }
     }
 
     private void FixedUpdate()
@@ -56,5 +77,26 @@ public class SpelerController : MonoBehaviour
 
         this.anim.SetFloat("vertical", verticalAxis);
         this.anim.SetFloat("horizontal", horizontalAxis);
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        InventoryItem item = other.GetComponent<InventoryItem>();
+        Debug.Log("Encountered something...");
+        if (item != null)
+        {
+            nearbyItem = item;
+
+            Debug.Log("Encountered " + item.DisplayName);
+            
+            inventoryHud.OpenPickupMessage("Press 'f' to pick up object.");
+        }
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        inventoryHud.ClosePickupMessage();
+
+        nearbyItem = null;
     }
 }
