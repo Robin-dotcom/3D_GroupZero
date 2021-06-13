@@ -43,8 +43,8 @@
       <option value="$PROJECT_DIR$/Assets/Inventory/InventoryItemBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Inventory/InventoryHud.cs" />
       <option value="$PROJECT_DIR$/Assets/Inventory/Inventory.cs" />
-      <option value="$PROJECT_DIR$/Assets/SpelerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Inventory/InventoryItem.cs" />
+      <option value="$PROJECT_DIR$/Assets/SpelerController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1ttLPtCoEATWY3xkek5yanEBiuS" />
@@ -88,7 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1623583425948</updated>
-      <workItem from="1623583439083" duration="9202000" />
+      <workItem from="1623583439083" duration="9828000" />
     </task>
     <servers />
   </component>

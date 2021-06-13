@@ -28,6 +28,8 @@ public class SpelerController : MonoBehaviour
         if (nearbyItem != null && Input.GetKeyDown(KeyCode.F))
         {
             Debug.Log("Picking up " + nearbyItem.DisplayName);
+            
+            inventoryHud.ClosePickupMessage();
 
             inventory.AddItem(nearbyItem);
             
