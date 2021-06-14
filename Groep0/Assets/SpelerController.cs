@@ -54,7 +54,7 @@ public class SpelerController : MonoBehaviour
 
     private void Grounded()
     {
-        if (Physics.CheckSphere(this.transform.position + Vector3.down, 0.2f, layerMask))
+        if (Physics.CheckSphere(this.transform.position + Vector3.down, 0.05f, layerMask))
         {
             this.ground = true;
         }
