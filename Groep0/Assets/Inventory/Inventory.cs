@@ -21,4 +21,9 @@ public class Inventory : MonoBehaviour
     {
         this.inventory.Remove(item.DisplayName);
     }
+
+    public Boolean HasItem(string itemName)
+    {
+        return inventory.ContainsKey(itemName);
+    }
 }
